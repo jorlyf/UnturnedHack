@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace UH
+namespace UH.Features.ESP
 {
     public class Render : MonoBehaviour
     {

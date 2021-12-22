@@ -1,4 +1,6 @@
 ﻿using UnityEngine;
+using UH.Features.ESP;
+using UH.Menu;
 
 namespace UH
 {
@@ -11,6 +13,9 @@ namespace UH
 
             HotKeys hotKeys = Loader.GameObject.AddComponent<HotKeys>();
             GameObject.DontDestroyOnLoad(hotKeys);
+
+            MainMenu mainMenu = Loader.GameObject.AddComponent<MainMenu>();
+            GameObject.DontDestroyOnLoad(mainMenu);
         }
     }
 }

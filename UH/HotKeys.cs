@@ -1,4 +1,6 @@
 ﻿using UnityEngine;
+using UH.Features.ESP;
+using UH.Menu;
 
 namespace UH
 {
@@ -6,15 +8,12 @@ namespace UH
     {
         public void Update()
         {
-            if (Input.GetKeyDown(KeyCode.F8))
+            if (Input.GetKeyDown(UHSettings.OpenMenuKey))
             {
-                ESP esp = GameObject.FindObjectOfType<ESP>();
-                esp.IsActive = !esp.IsActive;
+                MainMenu menu = GameObject.FindObjectOfType<MainMenu>();
+                menu.enabled = !menu.enabled;
             }
-            if (Input.GetKeyDown(KeyCode.F9))
-            {
-                Loader.Unload();
-            }
+            if (Input.GetKeyDown(KeyCode.F10)) Loader.Unload();
         }
     }
 }

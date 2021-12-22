@@ -69,16 +69,20 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ESP.cs" />
+    <Compile Include="Features\ESP\ESP.cs" />
+    <Compile Include="Features\ESP\Utils.cs" />
+    <Compile Include="Menu\Menu.cs" />
+    <Compile Include="HackSettings.cs" />
     <Compile Include="HotKeys.cs" />
     <Compile Include="Loader.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Render.cs" />
+    <Compile Include="Features\ESP\Render.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include=".editorconfig" />
     <None Include="app.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
