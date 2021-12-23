@@ -71,7 +71,7 @@
   <ItemGroup>
     <Compile Include="Features\ESP\ESP.cs" />
     <Compile Include="Features\ESP\Utils.cs" />
-    <Compile Include="Menu\Menu.cs" />
+    <Compile Include="Menu\MainMenu.cs" />
     <Compile Include="HackSettings.cs" />
     <Compile Include="HotKeys.cs" />
     <Compile Include="Loader.cs" />

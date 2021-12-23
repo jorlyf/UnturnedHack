@@ -1,10 +1,9 @@
 ﻿using UnityEngine;
-using UH.Features.ESP;
 using UH.Menu;
 
 namespace UH
 {
-    internal class HotKeys : MonoBehaviour
+    public class HotKeys : MonoBehaviour
     {
         public void Update()
         {

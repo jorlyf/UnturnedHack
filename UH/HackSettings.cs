@@ -10,6 +10,8 @@ namespace UH
 
         #region ESP
         public static float MaxESPDistance = 300f;
+        public static bool ESPBoxesEnable = true;
+        public static bool ESPLinesEnable = true;
         #endregion
 
         #region Keys

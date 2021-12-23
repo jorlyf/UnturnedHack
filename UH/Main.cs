@@ -15,6 +15,7 @@ namespace UH
             GameObject.DontDestroyOnLoad(hotKeys);
 
             MainMenu mainMenu = Loader.GameObject.AddComponent<MainMenu>();
+            mainMenu.enabled = false;
             GameObject.DontDestroyOnLoad(mainMenu);
         }
     }

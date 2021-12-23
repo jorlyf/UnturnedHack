@@ -3,7 +3,7 @@ using SDG.Unturned;
 
 namespace UH.Features.ESP
 {
-    internal class ESP : MonoBehaviour
+    public class ESP : MonoBehaviour
     {
         public void OnGUI()
         {
@@ -11,7 +11,8 @@ namespace UH.Features.ESP
             foreach (SteamPlayer steamPlayer in Provider.clients)
             {
                 Player player = steamPlayer.player;
-                if (steamPlayer.playerID.nickName == "jorlyf") continue; // check am I
+
+                if (steamPlayer.playerID.playerName == "jorlyf") continue; // check am I
                 if (!Utils.IsInDistance(Camera.main.transform.position,
                     player.transform.position, UHSettings.MaxESPDistance)) continue;
                 if (player.life.isDead) continue;
@@ -34,8 +35,11 @@ namespace UH.Features.ESP
             float widthOffset = 2f;
             float width = height / widthOffset;
 
-            Render.DrawBox(footpos.x - (width / 2), (float)Screen.height - footpos.y - height, width, height, color, 2f);
-            Render.DrawLine(new Vector2((float)(Screen.width / 2), (float)(Screen.height / 2)), new Vector2(footpos.x, (float)Screen.height - footpos.y), color, 2f);
+            if (UHSettings.ESPBoxesEnable)
+                Render.DrawBox(footpos.x - (width / 2), (float)Screen.height - footpos.y - height, width, height, color, 2f);
+
+            if (UHSettings.ESPLinesEnable)
+                Render.DrawLine(new Vector2((float)(Screen.width / 2), (float)(Screen.height / 2)), new Vector2(footpos.x, (float)Screen.height - footpos.y), color, 2f);
         }
 
     }
