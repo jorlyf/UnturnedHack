@@ -5,7 +5,8 @@ namespace UH
     public static class UHSettings
     {
         #region Colors
-        public static Color EnemyBoxColor = Color.cyan;
+        public static Color EnemyVisibleBoxColor = Color.cyan;
+        public static Color EnemyUnvisibleBoxColor = Color.blue;
         #endregion
 
         #region ESP
