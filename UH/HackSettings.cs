@@ -18,5 +18,10 @@ namespace UH
         #region Keys
         public static KeyCode OpenMenuKey = KeyCode.F8;
         #endregion
+
+        #region Debug
+        public static bool DebugIsEnabled = true;
+        public static bool DebugLogCrosshairGameObject = false;
+        #endregion
     }
 }

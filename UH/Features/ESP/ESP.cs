@@ -25,8 +25,7 @@ namespace UH.Features.ESP
                 Vector3 w2s_headpos = Camera.main.WorldToScreenPoint(playerHeadPos);
 
                 if (w2s_footpos.z < 0) continue;
-
-                if (Utils.IsVisible(Camera.main, playerHeadPos, player.gameObject))
+                if (Utils.IsVisible(Camera.main, w2s_headpos, player.gameObject))
                     DrawBoxESP(w2s_footpos, w2s_headpos, UHSettings.EnemyVisibleBoxColor);
                 else
                     DrawBoxESP(w2s_footpos, w2s_headpos, UHSettings.EnemyUnvisibleBoxColor);

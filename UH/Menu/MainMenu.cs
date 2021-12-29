@@ -17,12 +17,12 @@ namespace UH.Menu
         private void Draw(int id)
         {
             // toggles
-            UHSettings.ESPBoxesEnable = GUI.Toggle(new Rect(10, 25, 100, 25), UHSettings.ESPBoxesEnable, "ESP_Boxes");
-            UHSettings.ESPLinesEnable = GUI.Toggle(new Rect(10, 50, 100, 25), UHSettings.ESPLinesEnable, "ESP_Lines");
+            UHSettings.ESPBoxesEnable = GUI.Toggle(new Rect(10, 25, 125, 25), UHSettings.ESPBoxesEnable, "ESP_Boxes");
+            UHSettings.ESPLinesEnable = GUI.Toggle(new Rect(10, 50, 125, 25), UHSettings.ESPLinesEnable, "ESP_Lines");
 
             // max esp distance
-            GUI.Label(new Rect(15, 75, 100, 25), "MaxESPDistance");
-            _MaxDistance = GUI.TextField(new Rect(10, 100, 100, 25), _MaxDistance, 4);
+            GUI.Label(new Rect(15, 75, 125, 25), "MaxESPDistance");
+            _MaxDistance = GUI.TextField(new Rect(10, 100, 125, 25), _MaxDistance, 4);
             _MaxDistance = OnlyNumbers.Replace(_MaxDistance, "");
             float.TryParse(_MaxDistance, out UHSettings.MaxESPDistance);
         }

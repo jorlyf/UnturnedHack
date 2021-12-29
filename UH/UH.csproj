@@ -73,6 +73,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DebugUtils.cs" />
     <Compile Include="Features\ESP\ESP.cs" />
     <Compile Include="Features\ESP\Utils.cs" />
     <Compile Include="Menu\MainMenu.cs" />

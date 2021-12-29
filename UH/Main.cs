@@ -17,6 +17,10 @@ namespace UH
             MainMenu mainMenu = Loader.GameObject.AddComponent<MainMenu>();
             mainMenu.enabled = false;
             GameObject.DontDestroyOnLoad(mainMenu);
+
+            DebugUtils debugUtils = Loader.GameObject.AddComponent<DebugUtils>();
+            debugUtils.enabled = false; // debug log
+            GameObject.DontDestroyOnLoad(debugUtils);
         }
     }
 }

@@ -5,6 +5,7 @@ namespace UH.Features.ESP
     public class Render : MonoBehaviour
     {
         public static Texture2D lineTex;
+        public static GUIStyle StringStyle { get; set; } = new GUIStyle(GUI.skin.label);
         public static void DrawLine(Vector2 pointA, Vector2 pointB, Color color, float width)
         {
             Matrix4x4 matrix = GUI.matrix;
@@ -30,6 +31,12 @@ namespace UH.Features.ESP
             DrawLine(new Vector2(x, y), new Vector2(x, y + h), color, thickness);
             DrawLine(new Vector2(x + w, y), new Vector2(x + w, y + h), color, thickness);
             DrawLine(new Vector2(x, y + h), new Vector2(x + w, y + h), color, thickness);
+        }
+        public static void DrawString(string label, Vector2 pos)
+        {
+            GUIContent content = new GUIContent(label);
+            Vector2 size = StringStyle.CalcSize(content);
+            GUI.Label(new Rect(pos, size), content);
         }
     }
 }
